@@ -1,0 +1,15 @@
+{
+  "name": "client-service-bridge",
+  "version": "0.0.1",
+  "description": "Bridge tools for client-service which running on phantomjs environment.",
+  "main": "bridge-client.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jsCONFIG/client-service-bridge.git"
+  },
+  "scripts": {},
+  "author": [
+    "clpliuping@126.com"
+  ],
+  "dependencies": {}
+}
