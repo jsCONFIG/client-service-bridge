@@ -1,5 +1,5 @@
 # client-service-bridge
-Bridge tools for client-service which running on phantomjs environment. Must be used with "client-service".
+Bridge tools for "client-service". Running on phantomjs environment.
 
 ### Install
 ```
