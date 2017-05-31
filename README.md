@@ -32,3 +32,7 @@ page.open('https://github.com', function (status) {
 * cbk(status, res):
 	* status: response status(`success`/`fail`).
 	* res: response data.
+
+### CHANGR LOG
+
+* always send request even if the body is empty.

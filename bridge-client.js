@@ -34,6 +34,9 @@ var paramsToQuery = function (params) {
 };
 
 var concatUrlWidthObj = function (url, obj) {
+    if (!obj || !Object.keys(obj).length) {
+        return url;
+    }
     var urlQueryFlagPos = url.indexOf('?');
     if (urlQueryFlagPos === -1) {
         url += '?';
@@ -46,9 +49,6 @@ var concatUrlWidthObj = function (url, obj) {
 };
 
 var send = function (data, cbk) {
-    if (!data) {
-        return cbk && cbk();
-    }
     var postPage = webPage.create();
     initEnv(postPage);
     if (typeof data !== 'object') {
@@ -63,6 +63,7 @@ var send = function (data, cbk) {
         },
         data: JSON.stringify(data)
     };
+    console.log('open post req');
     postPage.open(
         clientConfig.api,
         settings,
@@ -76,9 +77,6 @@ var send = function (data, cbk) {
 };
 
 var get = function (data, cbk) {
-    if (!data) {
-        return cbk && cbk();
-    }
     var getterPage = webPage.create();
     initEnv(getterPage);
     var requestUrl = concatUrlWidthObj(clientConfig.api, data);
