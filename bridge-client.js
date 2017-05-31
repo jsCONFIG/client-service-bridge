@@ -63,7 +63,6 @@ var send = function (data, cbk) {
         },
         data: JSON.stringify(data)
     };
-    console.log('open post req');
     postPage.open(
         clientConfig.api,
         settings,
